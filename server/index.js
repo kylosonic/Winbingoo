@@ -15,8 +15,10 @@ const io = new Server(server, {
   cors: { origin: "*" }
 });
 
+const DB_URI = "mongodb+srv://admin:Na0941927360@cluster0.t0eo8zj.mongodb.net/?appName=Cluster0";
+
 // Database Connection
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(DB_URI)
   .then(() => console.log('✅ MongoDB Connected'))
   .catch(err => console.error('❌ DB Error:', err));
 
